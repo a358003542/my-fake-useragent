@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*-coding:utf-8-*-
 
-from ua_parser import user_agent_parser
 import logging
 from .const import FAMILY_MAP, PHONE_DEVICE_FAMILY_LIST, OS_FAMILY_MAP
 

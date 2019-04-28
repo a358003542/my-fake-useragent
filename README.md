@@ -108,6 +108,9 @@ ua = UserAgent(family='chrome', os_family='linux')
 ```
 
 ## CHANGELOG
+### 0.1.1
+this module does not need any third module at all.
+
 ### 0.1.0
 init
 
