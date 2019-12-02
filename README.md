@@ -10,18 +10,18 @@ version_ranget filter
 create your fake useragent
 
 ## install
-
-    python setup.py install
+```
+python setup.py install
+```
 
 or
-
-    pip install my_fake_useragent
-
-
+```text
+pip install my_fake_useragent
+```
+    
 ## usage
 
 ```python
-
 from my_fake_useragent import UserAgent
 
 ua = UserAgent(family='chrome')
@@ -40,8 +40,9 @@ res = ua.random()
 - opera
 - safari
 
-### os_family参数可用：
+### os_family参数可用
 可以设置列表还匹配多种情况
+
 - android
 - windows
 - linux
@@ -49,16 +50,16 @@ res = ua.random()
 - ios
 - chrome os
 
-### phone参数可用：
+### phone参数可用
+
 - None 不过滤
 - True 要求是移动端
-
 - False 要求不是移动端
 
 移动端的判据如下：
 如果device family检测到：
 
-```python
+```
 [
     'BlackBerry',
     'BlackBerry 9700',
@@ -102,12 +103,15 @@ res = ua.random()
 
 要求 linux操作系统的的chrome 浏览器:
 
-```python
+```
 from my_fake_useragent import UserAgent
 ua = UserAgent(family='chrome', os_family='linux')
 ```
 
 ## CHANGELOG
+### 0.1.6
+nothing change on the source code, but add the pypi wheel to speed up installation.
+
 ### 0.1.1
 this module does not need any third module at all.
 

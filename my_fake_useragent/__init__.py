@@ -109,7 +109,7 @@ class UserAgent():
 
 
 __softname__ = 'my_fake_useragent'
-__version__ = '0.1.1'
+__version__ = '0.1.6'
 
 
 def print_version():

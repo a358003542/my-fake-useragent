@@ -1,6 +1,6 @@
 include *.txt
 include *.md
-include setup.cfg
+include *.rst
 include LICENSE
 include my_fake_useragent/data.json
 include my_fake_useragent/parsed_data.json

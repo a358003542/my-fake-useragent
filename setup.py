@@ -1,25 +1,23 @@
 #!/usr/bin/env python
 # -*-coding:utf-8-*-
 
-
+import os
 from setuptools import setup, find_packages
 import my_fake_useragent
-import codecs
 
 REQUIREMENTS = []
 
-
-def long_description():
-    with codecs.open('README.md', encoding='utf-8') as f:
-        return f.read()
-
+this_directory = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name='my_fake_useragent',
     version=my_fake_useragent.__version__,
     description='create a fake useragent',
     url='https://github.com/a358003542/my-fake-useragent',
-    long_description=long_description(),
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author='wanze',
     author_email='a358003542@gmail.com',
     maintainer='wanze',
