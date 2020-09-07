@@ -2,8 +2,6 @@ include *.txt
 include *.md
 include *.rst
 include LICENSE
-include my_fake_useragent/data.json
-include my_fake_useragent/parsed_data.json
 include .gitignore
 recursive-include tests *.py
 

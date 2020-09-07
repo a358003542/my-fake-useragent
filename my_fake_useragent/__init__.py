@@ -3,14 +3,13 @@
 
 import random
 
-from .utils import load_parsed_json_data
 from .filter import filter_family, filter_os_family, filter_phone, \
     filter_version_range
 from .utils import build_stream_function
 
 
 class UserAgent():
-    parsed_json_data = load_parsed_json_data()
+    from my_fake_useragent.parsed_data import parsed_data
 
     def __init__(self,
                  family=None,
@@ -70,8 +69,8 @@ class UserAgent():
 
     def get_useragent_list(self):
         origin_data = []
-        for key in self.parsed_json_data:
-            origin_data += self.parsed_json_data[key]
+        for key in self.parsed_data:
+            origin_data += self.parsed_data[key]
 
         d = {
             'data': origin_data,
@@ -88,31 +87,25 @@ class UserAgent():
 
     def test_possible_family(self):
         t1 = set()
-        for k, v in self.parsed_json_data.items():
+        for k, v in self.parsed_data.items():
             for i in v:
                 t1.add(i['user_agent']['family'])
         return t1
 
     def test_possible_os_family(self):
         t1 = set()
-        for k, v in self.parsed_json_data.items():
+        for k, v in self.parsed_data.items():
             for i in v:
                 t1.add(i['os']['family'])
         return t1
 
     def test_possible_device_family(self):
         t1 = set()
-        for k, v in self.parsed_json_data.items():
+        for k, v in self.parsed_data.items():
             for i in v:
                 t1.add(i['device']['family'])
         return t1
 
 
 __softname__ = 'my_fake_useragent'
-__version__ = '0.1.6'
-
-
-def print_version():
-    return __version__
-
-# if __name__ == '__main__':
+__version__ = '0.2.0'

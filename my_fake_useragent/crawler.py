@@ -7,6 +7,8 @@ import requests
 from bs4 import BeautifulSoup
 from collections import defaultdict
 
+from my_fake_useragent.const import SUPPORT_TYPES
+
 ALL_DETAIL_URL = 'http://www.useragentstring.com/pages/useragentstring.php?name=All'
 
 WEB_TIMEOUT = 30
@@ -55,7 +57,6 @@ def update_parsed_json_data():
     更新parsed_json_data
     :return:
     """
-    from .utils import load_json_data
     json_data = load_json_data()
     from ua_parser import user_agent_parser
     from collections import defaultdict
@@ -73,3 +74,29 @@ def update_parsed_json_data():
     write_json('parsed_data.json', new_json_data)
 
     return 0
+
+
+def load_json_data():
+    f = open("data.json", encoding='utf8')
+
+    res = json.load(f)
+    return res
+
+
+def load_parsed_json_data():
+    f = open("parsed_data.json", encoding='utf8')
+
+    res = json.load(f)
+
+    new_res = {}
+    for k in res:
+        if k in SUPPORT_TYPES:
+            new_res[k] = res[k]
+
+    return new_res
+
+
+def convert_parsed_data_py():
+    parsed_data_json = load_parsed_json_data()
+    with open('parsed_data.py', 'w', encoding='utf8') as f:
+        f.write(f'parsed_data = {parsed_data_json}')

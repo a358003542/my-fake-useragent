@@ -11,5 +11,4 @@ def test():
     for i in range(100):
         res = ua.random()
 
-        print(res)
-
+        assert isinstance(res, str)

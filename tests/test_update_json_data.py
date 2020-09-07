@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 # -*-coding:utf-8-*-
 
-
-from my_fake_useragent.crawler import update_json_data, update_parsed_json_data
 import pytest
+from my_fake_useragent.crawler import update_json_data, update_parsed_json_data
 
 
 @pytest.mark.skip(reason="i have updated it")

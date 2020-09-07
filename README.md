@@ -109,6 +109,9 @@ ua = UserAgent(family='chrome', os_family='linux')
 ```
 
 ## CHANGELOG
+### 0.2.0
+make the parsed_data.json file to a .py file which will make this package more compatible with the pyinstaller package.
+
 ### 0.1.6
 nothing change on the source code, but add the pypi wheel to speed up installation.
 
