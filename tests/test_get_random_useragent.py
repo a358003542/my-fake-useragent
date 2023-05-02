@@ -12,3 +12,5 @@ def test():
         res = ua.random()
 
         assert isinstance(res, str)
+        assert len(res) > 0
+        assert 'chrome' in res.lower()

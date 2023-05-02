@@ -108,4 +108,4 @@ class UserAgent():
 
 
 __softname__ = 'my_fake_useragent'
-__version__ = '0.2.0'
+__version__ = '0.2.1'

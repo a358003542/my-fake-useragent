@@ -2,10 +2,6 @@
 generate your random fake useragent.
 
 
-## TODO
-version_ranget filter
-
-
 ## description:
 create your fake useragent
 
@@ -109,6 +105,11 @@ ua = UserAgent(family='chrome', os_family='linux')
 ```
 
 ## CHANGELOG
+### 0.2.1
+更新了最新的数据，看了一下，就Chrome firefox等增加了一些新的版本。项目很久没接触了，其他的没做修改。
+
+浏览器现在变动得也比较少了，本项目就生成一些随机的useragent基本上够用了，打算封存了。
+
 ### 0.2.0
 make the parsed_data.json file to a .py file which will make this package more compatible with the pyinstaller package.
 
